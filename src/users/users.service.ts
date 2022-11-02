@@ -35,4 +35,12 @@ export class UsersService {
       },
     );
   }
+
+  remove(id: string) {
+    return this.userModel
+      .deleteOne({
+        _id: id,
+      })
+      .exec();
+  }
 }
